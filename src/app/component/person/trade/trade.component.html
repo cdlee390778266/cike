@@ -1,0 +1,75 @@
+<app-nav-bar [viewTitle]="'交易'"></app-nav-bar>
+<div class="record">
+  <div class="record-bar">
+    <span [class.active]="!nav" (click)="changeNav(0)">购买记录</span>
+    <span [class.active]="nav" (click)="changeNav(1)">兑换记录</span>
+  </div>
+  <div class="record-blank"></div>
+  <div class="table" [hidden]="nav">
+    <table cellspacing="0">
+    <tr>
+      <th>购买大小</th>
+      <th>购买金额</th>
+      <th>购买数量</th>
+      <th>购买时间</th>
+    </tr>
+    <tr>
+      <td>1G</td>
+      <td>￥20</td>
+      <td>1</td>
+      <td>10-21-2015</td>
+    </tr>
+    <tr>
+      <td>1G</td>
+      <td>￥20</td>
+      <td>1</td>
+      <td>10-21-2015</td>
+    </tr>
+    <tr>
+      <td>1G</td>
+      <td>￥20</td>
+      <td>1</td>
+      <td>10-21-2015</td>
+    </tr>
+    </table>
+  </div>
+  <div class="table" [hidden]="!nav">
+    <table cellspacing="0">
+    <tr>
+      <th>兑换大小2</th>
+      <th>兑换积分</th>
+      <th>兑换时间</th>
+    </tr>
+    <tr>
+      <td>1G</td>
+      <td>2000分</td>
+      <td>10-21-2015</td>
+    </tr>
+    <tr>
+      <td>1G</td>
+      <td>2000分</td>
+      <td>10-21-2015</td>
+    </tr>
+    <tr>
+      <td>1G</td>
+      <td>2000分</td>
+      <td>10-21-2015</td>
+    </tr>
+    <tr>
+      <td>1G</td>
+      <td>2000分</td>
+      <td>10-21-2015</td>
+    </tr>
+    <tr>
+      <td>1G</td>
+      <td>2000分</td>
+      <td>10-21-2015</td>
+    </tr>
+    <tr>
+      <td>1G</td>
+      <td>2000分</td>
+      <td>10-21-2015</td>
+    </tr>
+    </table>
+  </div>
+</div>

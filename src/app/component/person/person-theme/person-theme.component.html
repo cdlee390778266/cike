@@ -1,0 +1,173 @@
+<app-nav-bar [viewTitle]="'主题'"></app-nav-bar>
+<div class="mb100">
+  <div class="container-fluid u-box tcenter">
+    <div class=" h170 mt80">
+      <div class="media ">
+        <div class="media-left media-middle">
+          <img src="assets/images/login_face.png"  alt="" class="img-circle " />
+        </div>
+        <div class="media-body u-boxc">
+          <p>这种一眼难尽的时候<img src="assets/images/nv.png"  alt="" /></p>
+          <p class="u-f1">向往自由自在的生活。也喜欢...</p>
+          <p>排名：<span class="fc610">2</span><span class="ml20">发布照片数：388</span></p>
+        </div>
+        <div class="media-right media-middle">
+             <img src="assets/images/u_r.png"  alt="" class="" />
+        </div>
+      </div>
+    </div>
+    <div class="row u-nav">
+      <div class="col-sm-3 col-xs-3"><a href="javascript:void(0)" [class.active]="nav == 0" (click)="changeNav(0)">23<br /><span>主题</span></a><span></span></div>
+      <div class="col-sm-3 col-xs-3"><a href="javascript:void(0)" [class.active]="nav == 1" (click)="changeNav(1)">90<br /><span>随手拍</span></a><span></span></div>
+      <div class="col-sm-3 col-xs-3"> <a href="javascript:void(0)" [class.active]="nav == 2" (click)="changeNav(2)">138<br /><span>关注</span></a><span></span></div>
+      <div class="col-sm-3 col-xs-3"><a href="javascript:void(0)" [class.active]="nav == 3" (click)="changeNav(3)">12万<br /><span>粉丝</span></a></div>
+    </div>
+  </div>
+
+  <div class="container-fluid mes-box" [hidden]="nav != 0">
+    <div class="u-mesli ">
+    <div class="row ums-title">
+      <div class="col-xs-3 col-sm-2 ums-face ">
+       <img src="assets/images/img1.png"  alt="" class="img-circle " />
+      </div>
+      <div class="col-xs-6 col-sm-8 u-adress ">
+        <p class="mt10">西毒.欧阳锋</p>
+        <p class="fcbd"><img src="assets/images/adress.png"  alt="" />
+        <span>成都.芷泉街</span></p>
+      </div>
+      <div class="col-xs-3 col-sm-2 tcenter">
+        <div class="u-edit">
+          <img src="assets/images/more.png"  alt="" class="pointer" />
+          <ul>
+            <li><a href="javascript:void(0)">编辑</a></li>
+            <li><a href="javascript:void(0)" class="t-del">删除</a></li>
+            <li><a href="javascript:void(0)">续传</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+     <div class="row  mt20 mb20">
+          <a routerLink="/person/cdetail/1"><img src="assets/images/img1.png"  alt="" class="w100"  /></a>
+      </div>
+      <div class="row umes-dsc">
+        <div class="col-xs-8">大学时光的故事...</div>
+        <div class="col-xs-4 tcenter"><span class="u-cat">故事</span></div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-fluid mes-box" [hidden]="nav != 1">
+    <div class="u-mesli ">
+      <div class="row ums-title">
+        <div class="col-xs-3 col-sm-2 ums-face ">
+         <img src="assets/images/img1.png"  alt="" class="img-circle " />
+        </div>
+        <div class="col-xs-6 col-sm-8 u-adress ">
+          <p class="mt10">西毒.欧阳锋</p>
+          <p class="fcbd"><img src="assets/images/adress.png"  alt="" />
+          <span>成都.芷泉街</span></p>
+        </div>
+      </div>
+      <div class="row  mt20 mb20 rel">
+        <div class="up-check">
+          <input type="checkbox" id="mes3" />
+          <label for="mes3"></label>
+        </div>
+        <a routerLink="/person/cdetail/1"><img src="assets/images/img1.png"  alt="" class="w100"  /></a>
+        <div class="theme-bar">
+          <span class="themes-ads">10-02-2015  12:00</span>
+          <div class="u-edit2">
+            <img src="assets/images/more.png"  alt="" />
+            <ul>
+              <li><a href="javascript:void(0)">编辑</a></li>
+              <li><a href="javascript:void(0)">删除</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row  mb20 umes-detail">
+        <div class="col-xs-12 mes-dsc mb20">
+          坝上的最后一天，车子开进一处偏远的山坳，穿着雨鞋
+  深入河中间，伴着一棵枯树仰望满天星斗。
+        </div>
+        <div class="col-xs-4">
+          <a href="javascript:void(0)" class="u-comment">评论<span>(0)</span></a>
+        </div>
+        <div class="col-xs-4">
+          <a href="javascript:void(0)" class="u-collect">收藏<span>(1124)</span></a>
+        </div>
+        <div class="col-xs-4">
+          <a href="javascript:void(0)" class="u-zam">赞<span>(224)</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid mes-box" [hidden]="nav != 2">
+    <div class="row c-li">
+      <div class="col-xs-3 col-sm-3 c-face tcenter">
+        <img src="assets/images/img1.png"  alt="" />
+      </div>
+      <div class="col-xs-9 col-sm-9">
+         背包客<img src="assets/images/nan.png"  alt="" class="ml10" />
+      </div>
+    </div>
+    <div class="row c-li">
+      <div class="col-xs-3 col-sm-3 c-face tcenter">
+        <img src="assets/images/img1.png"  alt="" />
+      </div>
+      <div class="col-xs-9 col-sm-9">
+         我是女生我骄傲<img src="assets/images/nan.png"  alt="" class="ml10" />
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid mes-box" [hidden]="nav != 3">
+  <div class="row c-li">
+    <div class="col-xs-3 col-sm-3 c-face tcenter">
+      <img src="assets/images/img1.png"  alt="" />
+    </div>
+     <div class="col-xs-6 col-sm-7">
+       我是女生我骄傲<img src="assets/images/nan.png"  alt="" class="ml10" />
+    </div>
+     <div class="col-xs-3 col-sm-2 tcenter">
+     <a href="javascript:void(0)"><img src="assets/images/careimg1.png"  alt="" class="care1" /></a>
+    </div>
+  </div>
+  <div class="row c-li">
+    <div class="col-xs-3 col-sm-3 c-face tcenter">
+      <img src="assets/images/img1.png"  alt="" />
+    </div>
+     <div class="col-xs-6 col-sm-7">
+       我是女生我骄傲<img src="assets/images/nan.png"  alt="" class="ml10" />
+    </div>
+     <div class="col-xs-3 col-sm-2 tcenter">
+     <a href="javascript:void(0)"><img src="assets/images/careimg1.png"  alt="" class="care1" /></a>
+    </div>
+  </div>
+  <div class="row c-li">
+    <div class="col-xs-3 col-sm-3 c-face tcenter">
+      <img src="assets/images/img1.png"  alt="" />
+    </div>
+     <div class="col-xs-6 col-sm-7">
+       我是女生我骄傲<img src="assets/images/nan.png"  alt="" class="ml10" />
+    </div>
+     <div class="col-xs-3 col-sm-2 tcenter">
+     <a href="javascript:void(0)"><img src="assets/images/careimg1.png"  alt="" class="care1" /></a>
+    </div>
+  </div>
+  <div class="row c-li">
+    <div class="col-xs-3 col-sm-3 c-face tcenter">
+      <img src="assets/images/img1.png"  alt="" />
+    </div>
+     <div class="col-xs-6 col-sm-7">
+       我是女生我骄傲<img src="assets/images/nan.png"  alt="" class="ml10" />
+    </div>
+     <div class="col-xs-3 col-sm-2 tcenter">
+     <a href="javascript:void(0)"><img src="assets/images/careimg1.png"  alt="" class="care1" /></a>
+    </div>
+  </div>
+  </div>
+</div>
+<app-foot></app-foot>

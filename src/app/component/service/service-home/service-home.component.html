@@ -1,0 +1,12 @@
+<div [@routeAnimation]>
+    <img src="assets/images/serve_bg.png"  alt="" class="img-responsive serve-bg"  />
+    <div class="container-fluid pt80 ">
+       <div  class="row serve-box">
+          <div class="col-xs-6"><a [routerLink]="['/service/manager']" class="sa1">管理空间</a></div>
+           <div class="col-xs-6"> <a [routerLink]="['/service/contact']" class="sa2">服务热线</a></div>
+           <div class="col-xs-6"><a class="sa3" [routerLink]="['/service/proposal']">建议反馈</a></div>
+           <div class="col-xs-6"> <a [routerLink]="['/service/introduce']" class="sa4">使用说明</a></div>
+       </div>
+    </div>
+    <app-foot></app-foot>
+</div>

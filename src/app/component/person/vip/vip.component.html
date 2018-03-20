@@ -1,0 +1,53 @@
+<app-nav-bar [viewTitle]="'会员认证'"></app-nav-bar>
+<div class="login-box pb60">
+   <div class="autype">
+     <span [class.ay1]="!nav" (click)="changeNav(0)">个人认证</span>
+     <span [class.ay1]="nav" (click)="changeNav(1)">企业认证</span>
+   </div>
+   <form action="" method="" [hidden]="nav">
+     <div class="at-box" >
+       <div class="input-group">
+         <input type="text" class="phone" value=""  placeholder='请输入手机号码' />
+       </div>
+       <div class="input-group">
+         <input type="text" class="autype-code" value="" placeholder='请输入验证码'  />
+         <div class="g-send" id="g-send">发送</div>
+       </div>
+
+       <div class="input-group mt40">
+         <input type="submit" class="login-menu bg42" value="提交"  />
+       </div>
+     </div>
+   </form> 
+
+   <form action="" method="" [hidden]="!nav">
+     <div class="at-box" >
+       <div class="input-group">
+         <input type="text" class="autype-gs" value=""  placeholder='请输入公司名称' />
+       </div>
+       <div class="input-group">
+         <input type="text" class="autype-user" value=""  placeholder='请输入企业法人' />
+       </div>
+       <div class="input-group">
+         <input type="text" class="autype-zz" value=""  placeholder='请输入营业执照登记号' />
+       </div>
+       <div class="input-group">
+         <input type="text" class="phone" value=""  placeholder='请输入公司名称' />
+       </div>
+       
+       <div class="input-group mt40">
+         <input type="submit" class="login-menu bg42" value="提交"  />
+       </div>
+     </div>
+   </form>
+  </div>
+
+  <div class="message tcenter" [hidden]="true">
+     <img src="../../../assets/images/warning.png"  alt=""  class="mr10" />正在审核中，请耐心等待！
+  </div>  
+
+  <div class="message tcenter" [hidden]="true">
+    <p>您已认证为企业用户，您可以在
+  个人信息中查看相关资料</p>
+    <p class="mt80"><a href="" class="a1-style1">前往此客</a></p>
+  </div>   

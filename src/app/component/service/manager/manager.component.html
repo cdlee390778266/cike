@@ -1,0 +1,24 @@
+<app-nav-bar [viewTitle]="'管理空间'"></app-nav-bar>
+<div class="pt60 container-fluid space">
+  <div class="row">
+    <div class="space-bar">
+      <p>25.11G/500G</p>
+      <div class="progress">
+        <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+          <span class="sr-only">40% Complete (success)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6 col-s">
+      <div class="space-img">
+        <img src="assets/images/serve_img1.png"  alt="" class="img-responsive" />
+        <p class="p1">2G大空间<span class="ml20">海量存储</span></p>
+        <p class="p2">2G</p>
+      </div>
+      <p class="p3">￥40.00 <span class="fright fc255">4000分</span></p>
+      <p><a [routerLink]="['/service/buy']">在线购买</a><a [routerLink]="['/person/record']" class="k-dui">积分兑换</a></p>
+    </div>
+  </div>
+</div>

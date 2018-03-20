@@ -1,0 +1,44 @@
+<div [@routeAnimation] >
+<header>
+    <label class="h-icon1" id="beginTime">
+        <input [owlDateTimeTrigger]="time" [owlDateTime]="time" [(ngModel)]="selectDate">
+        <owl-date-time [pickerMode]="'dialog'" pickerType="calendar" #time (afterPickerOpen)="refreshDate()"></owl-date-time>
+    </label>
+   <div class="h-icon2 active"><a routerLink="/person/message"></a></div>
+   <ul>
+        <li *ngFor="let item of homeData" (click)="checkCategory(item)"><a href="javascript:void(0)" [class.active]="item.isActive">{{item.categoryName}}</a></li>
+    </ul>
+</header>
+
+<div class="">
+    <div class="i-main" *ngFor="let item of homeData" [@routeAnimation]="item.isActive ? 'fadeIn' : 'fadeOut'"> 
+        <div class="i-ad" *ngIf="isShowAd" [@routeAnimation]="'in'">
+        <a href=""><img src="assets/images/banner.jpg"  alt=""   /></a>
+        <span class="ad-close" id="ad-close" (click)="removeAd()"></span>
+    </div>
+        <div class="i-box" *ngFor="let mes of item.categoryData">
+            <img src="{{mes.src}}"  alt="" class="img-responsive" />
+            <span class="img-nums">{{mes.album}}</span>
+            <div class="i-row1">
+                <div class="i-rowl">
+                   {{mes.time}} 
+                </div>
+                <div class="i-rowr">
+                    <a class="zam" href="javascript:void(0)" [class.active]="mes.isZan" (click)="changeZan(mes)"></a><span class="znum">{{mes.zanNum}}</span> <a class="care" href="javascript:void(0)" [class.active]="mes.isCollected" (click)="changeCollect(mes)"></a>
+                </div>
+            </div>
+            <div class="i-row2">
+                <div class="i-rowl">
+                <img src="assets/images/face.png"  alt="" />{{mes.poster}} 
+                </div>
+                <div class="i-rowr">
+                   <span class="adress">{{mes.address}}</span>
+                    <span class="mes-icat">{{mes.category}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="assets/images/camera.png"  alt="相册" class="camera" />
+</div>
+<app-foot></app-foot>
+</div>
